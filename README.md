@@ -18,26 +18,27 @@ For this lab you will
 
 Visit [SQL Try Editor at W3Schools.com](https://www.w3schools.com/Sql/tryit.asp?filename=trysql_select_top) using the **Google Chrome (or Chromium if you use Linux) browser** and write _SQL queries_ for the following requirements:
 
-- Display the ProductName and CategoryName for all products in the database. Shows 76 records.
-- Display the OrderID and ShipperName for all orders placed before January 9, 1997. Shows 161 records.
-- Display all ProductNames and Quantities placed on order 10251. Sort by ProductName. Shows 3 records.
-- Display the OrderID, CustomerName and the employee's LastName for every order. All columns should be labeled clearly. Displays 196 records.
+[X] Display the ProductName and CategoryName for all products in the database. Shows 76 records.
+[X] Display the OrderID and ShipperName for all orders placed before January 9, 1997. Shows 161 records.
+[X] Display all ProductNames and Quantities placed on order 10251. Sort by ProductName. Shows 3 records.
+[X] Display the OrderID, CustomerName and the employee's LastName for every order. All columns should be labeled clearly. Displays 196 records.
 
 ### Database Methods
 
 Write helpers methods in `./schemes/scheme-model.js` that match the following specifications:
 
-- `find()`:
+[X] `find()`:
   - Calling find returns a promise that resolves to an array of all schemes in the database.
   - No steps are included.
-- `findById(id)`:
+[X] `findById(id)`:
   - Expects a scheme `id` as its only parameter.
   - Resolve to a single scheme object.
   - On an invalid `id`, resolves to `null`.
-- `findSteps(id)`:
+[X] `findSteps(id)`:
   - Expects a scheme `id`.
   - Resolves to an array of all correctly ordered step for the given scheme: `[ { id: 17, scheme_name: 'Find the Holy Grail', step_number: 1, instructions: 'quest'}, { id: 18, scheme_name: 'Find the Holy Grail', step_number: 2, instructions: '...and quest'}, etc. ]`.
-  - This array should include the `scheme_name` _not_ the `scheme_id`.
+  - This array should include the `scheme_name` _not_ the `scheme_id`..
+  
 - `add(scheme)`:
   - Expects a scheme object.
   - Inserts scheme into the database.
@@ -46,6 +47,7 @@ Write helpers methods in `./schemes/scheme-model.js` that match the following sp
   - Expects a changes object and an `id`.
   - Updates the scheme with the given id.
   - Resolves to the newly updated scheme object.
+  
 - `remove(id)`:
   - Removes the scheme object with the provided id.
   - Resolves to the removed scheme
